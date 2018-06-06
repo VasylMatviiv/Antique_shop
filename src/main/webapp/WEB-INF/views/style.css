@@ -1,0 +1,422 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    
+}
+li{
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    font-family: 'Raleway', sans-serif;
+}
+.logo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-image: url("img/shapka3.jpg");
+}
+.graficlogo{
+    height: 350px;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.sign{
+    height: 200px;
+    max-width: 100%;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+.register, .login{
+    text-decoration: none;
+    color: black;
+    padding: 3px;
+    margin: 2px;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 2px;
+    font-weight: 600;
+}
+
+.nav{
+    margin: auto;
+    width: 800px;
+    height: 50px;
+    justify-content: center;
+}
+
+.top .nav{
+    background-color: white;
+    font-size: 14px;
+    margin-top: 30px;
+    display:flex;
+    justify-content: center;
+}
+.top .nav a{
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    font-size: 16px; 
+}
+.top.nav a:hover{
+    border-bottom: 2px solid black;
+}
+.top.nav .icon{
+    display: none;
+}
+
+
+@media screen and (max-width: 768px){
+    .top.nav a:not(:first-child){
+        display: none;
+    }
+    .top.nav a.icon{
+        float: right;
+        margin-top: -3px;
+        display: block;
+        color: black;
+    }
+    .nav{
+        width: 100%;
+        height: 100px;
+    }
+    .top.nav.responsive{
+        position: relative;     
+    }
+    .top.nav.responsive a.icon{
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .top.nav.responsive a{
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    .advantages_item{
+        width: 35%;
+    }
+    .goods_item{
+         width: 45%;
+    }
+    .goodAddOpt{
+        width: 45%;
+    }
+    .addInf{
+        width: 45%;
+    }
+    .register_opt{
+        width: 45%;
+    }
+    .register_inf{
+        width: 45%;
+    }
+    .login_opt{
+        width: 45%;
+    }
+    .login_inf{
+        width: 45%;
+    }
+    .register{
+        width: 45%;
+    }
+    .login{
+        width: 45%;
+    }
+    .footName{
+        width: 45%;
+    }
+    .footContacts{
+        width: 45%;
+    }
+    #map{
+        width: 45%;
+    }
+    
+}
+@media screen and (max-width: 420px){
+    .advantages{
+        flex-direction: column;
+    }
+    .advantages_item{
+        width: 100%;
+    }
+    .goods{
+        flex-direction: column;
+    }
+    .goods_item{
+        width: 100%;
+    }
+    .goodAddOpt{
+        width: 100%;
+    }
+    .register_opt{
+        width: 100%;
+    }
+    .login_opt{
+        width: 100%;
+    }
+    .register{
+        width: 100%;
+    }
+    .login{
+        width: 100%;
+    }
+    .footName{
+        width: 100%;
+    }
+    .footContacts{
+        width: 100%;
+    }
+}
+
+.advantages_container{
+    display: flex;
+    justify-content: center;
+}
+
+.advantages{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.advantages_item{
+    width: 30%;
+}
+.advantages_item img{
+    max-width: 100%;
+}
+.footer{
+    width: 100%;
+    height: auto;
+    background-color: black;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 25px;
+}
+.footer p{
+    color: white;
+}
+
+.footer a{
+    color: white;
+    font-size: 14px;
+    margin-left: 10px;
+}
+.footer .nav a:hover{
+    border-bottom: 1px solid white;
+}
+.footName{
+    font-size: 18px;
+    word-spacing: 5px;
+}
+.footContacts{
+    word-spacing: 5px;
+}
+
+
+
+
+.slideshow{
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+.prev, .next{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6 ease;
+    border-radius: 0 3px 3px 0;
+    
+}
+
+.next{
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover{
+    background-color: rgba(0,0,0,0.8)
+}
+
+.numberText{
+    color: #f2f2f2;
+    font-size: 14px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.dot{
+    cursor: pointer;
+    height: 13px;
+    width: 13px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.8s ease;
+}
+
+.active, dot:hover{
+    background-color: black;
+}
+
+.fade{
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade{
+    from{opacity: .4}
+    to{opacity: 1}
+}
+@keyframes fade{
+    from{opacity:.4}
+    to{opacity: 1}
+}
+
+
+.about{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+
+
+.goods_container{
+    display: flex;
+    justify-content: center;
+}
+.goods{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    width: 80%;
+    display: flex;
+    justify-content:center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+.goods_item{
+    padding: 15px;
+}
+.goods_item img{
+    box-sizing: border-box;
+    max-width: 100%;
+    opacity: 0.6;
+    padding: 10px;
+}
+.goods_item img:hover{
+    opacity: 1;
+}
+
+
+
+.goodAdd_container{
+    display: flex;
+    justify-content: center;
+}
+.goodAddOpt{
+    padding: 20px;
+    width: 30%;
+}
+.addInf{
+    padding: 10px;
+    font-size: 14px;
+    margin: 5px;
+    border-radius: 5px;
+    max-width: 100%;
+}
+
+
+
+.register_container{
+    display: flex;
+    justify-content: center;
+}
+.register_opt{
+    padding-top: 5px;
+    padding-bottom: 30px;
+    width: 30%;
+}
+.register_inf{
+    padding: 10px;
+    font-size: 14px;
+    margin: 8px;
+    border-radius: 5px;
+    max-width: 100%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+}
+#register_submit{
+    color: white;
+    background-color: black;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.login_container{
+    display: flex;
+    justify-content: center;
+}
+.login_opt{
+    padding-top: 5px;
+    padding-bottom: 70px;
+    width: 30%;
+}
+.login_inf{
+    padding: 10px;
+    font-size: 14px;
+    margin: 8px;
+    border-radius: 5px;
+    max-width: 100%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+}
+#login_submit{
+    color: white;
+    background-color: black;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.map_container{
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+}
+#map{
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    margin-bottom: 40px;
+    max-width: 100%;
+}
+.locate{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+}
